@@ -1,0 +1,32 @@
+{
+  "name": "no-scroll",
+  "version": "0.1.0",
+  "description": "Disable the document's scrolling",
+  "main": "index.js",
+  "scripts": {
+    "demo-bundle": "browserify demo -o demo/demo-bundle.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/davidtheclark/no-scroll.git"
+  },
+  "keywords": [
+    "scroll",
+    "scrolling",
+    "disable",
+    "modal",
+    "dialog"
+  ],
+  "author": "David Clark",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/davidtheclark/no-scroll/issues"
+  },
+  "homepage": "https://github.com/davidtheclark/no-scroll#readme",
+  "devDependencies": {
+    "browserify": "^11.0.1"
+  },
+  "files": [
+    "index.js"
+  ]
+}
