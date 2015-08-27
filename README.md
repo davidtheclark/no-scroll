@@ -16,6 +16,8 @@ Here's how this works:
 npm install no-scroll
 ```
 
+Dependencies: *none*.
+
 ## Usage
 
 This module exposes two simple functions: `on()` and `off()`.
