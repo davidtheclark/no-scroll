@@ -18,6 +18,8 @@ npm install no-scroll
 
 Dependencies: *none*.
 
+But your build process will need to handle CommonJS.
+
 ## Usage
 
 This module exposes two simple functions: `on()` and `off()`.

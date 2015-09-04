@@ -1,5 +1,5 @@
 var scrollbarSize;
-var doc = document.documentElement;
+var doc = global.document && global.document.documentElement;
 
 function getScrollbarSize() {
   if (typeof scrollbarSize !== 'undefined') return scrollbarSize;
@@ -18,6 +18,7 @@ function hasScrollbar() {
 }
 
 function on(options) {
+  if (!doc) return;
   var rightPad = parseInt(getComputedStyle(doc)['padding-right'], 10);
   var originalStyle = doc.getAttribute('style') || '';
   originalStyle += 'overflow:hidden;';
@@ -29,6 +30,7 @@ function on(options) {
 }
 
 function off() {
+  if (!doc) return;
   var cleanedStyle = doc.getAttribute('style')
     .replace(/overflow:hidden;(?:padding-right:.+?;)?/, '');
   doc.setAttribute('style', cleanedStyle);
