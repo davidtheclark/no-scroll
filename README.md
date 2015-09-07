@@ -20,6 +20,12 @@ Dependencies: *none*.
 
 But your build process will need to handle CommonJS.
 
+## Browser Support
+
+IE9+
+
+Not touchscreens (see Caveats below)
+
 ## Usage
 
 This module exposes two simple functions: `on()` and `off()`.
@@ -41,8 +47,3 @@ I have not yet figured out or found an ideal way of stopping scrolling *on touch
 at least for a library;
 for example, it disables scrolling of *any* element, not just the document.)
 *Any big ideas? Please PR?*
-
-## Browser Support
-
-IE9+
-Not touchscreens :(
