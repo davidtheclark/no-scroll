@@ -1,5 +1,7 @@
+(function(root) {
+
 var scrollbarSize;
-var doc = global.document && global.document.documentElement;
+var doc = root.document && root.document.documentElement;
 
 function getScrollbarSize() {
   if (typeof scrollbarSize !== 'undefined') return scrollbarSize;
@@ -36,7 +38,19 @@ function off() {
   doc.setAttribute('style', cleanedStyle);
 }
 
-module.exports = {
-  on: on,
-  off: off,
-};
+// Expose no-scroll globally as `noScroll` if window is defined.
+if (typeof window !== 'undefined') {
+  window.noScroll  = {
+    on: on,
+    off: off
+  }
+}
+
+if (typeof module !== 'undefined' && module.exports) {
+  module.exports = {
+    on: on,
+    off: off,
+  };
+}
+
+})(this);
