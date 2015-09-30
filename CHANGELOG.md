@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.1.0
+
+- Expose `noScroll` globally if `module.exports` is unavailable (no CommonJS environment).
+
 ## 1.0.2
 
 - No-op if there's no document.

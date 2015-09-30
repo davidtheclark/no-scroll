@@ -18,8 +18,6 @@ npm install no-scroll
 
 Dependencies: *none*.
 
-But your build process will need to handle CommonJS.
-
 ## Browser Support
 
 IE9+
@@ -39,6 +37,9 @@ noScroll.on();
 // To restore scrolling
 noScroll.off();
 ```
+
+If you do not have a CommonJS environment (no `module.exports`), the module
+exposes the global object `noScroll`.
 
 ## Caveats
 
