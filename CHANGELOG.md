@@ -1,5 +1,9 @@
 # Changelog
 
+### 1.1.2
+
+- Fix IE bug.
+
 ## 1.1.0 and 1.1.1
 
 - Expose `noScroll` globally if `module.exports` is unavailable (no CommonJS environment).
