@@ -22,21 +22,18 @@
     if (typeof document === 'undefined') return;
     var doc = document.documentElement;
     var rightPad = parseInt(getComputedStyle(doc)['padding-right'], 10);
-    var originalStyle = doc.getAttribute('style') || '';
-    originalStyle += 'overflow:hidden;';
+    doc.style.overflow = 'hidden';
     if (hasScrollbar()) {
       rightPad += getScrollbarSize();
-      originalStyle += 'padding-right:' + rightPad + 'px;';
+      doc.style.paddingRight = rightPad + 'px';
     }
-    doc.setAttribute('style', originalStyle);
   }
 
   function off() {
     if (typeof document === 'undefined') return;
     var doc = document.documentElement;
-    var cleanedStyle = doc.getAttribute('style')
-      .replace(/overflow:hidden;(?:padding-right:.+?;)?/, '');
-    doc.setAttribute('style', cleanedStyle);
+    doc.style.overflow = '';
+    doc.style.paddingRight = '';
   }
 
   var noScroll = {
