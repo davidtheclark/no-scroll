@@ -21,8 +21,6 @@ Dependencies: *none*.
 
 IE9+
 
-Not touchscreens (see Caveats below)
-
 ## Usage
 
 This module exposes two simple functions: `on()` and `off()`.

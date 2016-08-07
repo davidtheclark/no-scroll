@@ -1,6 +1,11 @@
 # Changelog
 
-### 1.1.2
+## 2.0.0
+
+- Switch methods for scroll blocking. Now we're fixing the `position` of `document.documentElement`.
+- Switch methods for scrollbar compensation. Now we're using `calc()`.
+
+## 1.1.2
 
 - Fix IE bug.
 
