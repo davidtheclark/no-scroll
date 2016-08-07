@@ -6,8 +6,7 @@ It's silly how many libraries have their own implementation of this.
 So I thought I'd make a module that other libraries could use.
 
 Here's how this works:
-- When you turn it `on()`, the `document.body` is styled with `overflow: hidden`
-  and a `padding-right` that mimics the width of the scrollbar.
+- When you turn it `on()`, the `documentElement` is styled with `width: calc(100% - scrollbarSize)`, `position: fixed`, `top: currentScrollTop`, and `overflow: hidden`.
 - When you turn it `off()`, everything goes back to the way it was before.
 
 ## Installation
@@ -40,11 +39,3 @@ noScroll.off();
 
 If you do not have a CommonJS environment (no `module.exports`), the module
 exposes the global object `noScroll`.
-
-## Caveats
-
-I have not yet figured out or found an ideal way of stopping scrolling *on touch devices*.
-(The common practice of `e.preventDefault()` on `touchmove` events is too obstructive,
-at least for a library;
-for example, it disables scrolling of *any* element, not just the document.)
-*Any big ideas? Please PR?*
