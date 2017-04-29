@@ -23,7 +23,7 @@ IE9+
 
 ## Usage
 
-This module exposes two simple functions: `on()` and `off()`.
+This module exposes three simple functions: `on()`, `off()` and `toggle()`.
 
 ```js
 var noScroll = require('no-scroll');
@@ -33,6 +33,9 @@ noScroll.on();
 
 // To restore scrolling
 noScroll.off();
+
+// To toggle scrolling
+noScroll.toggle();
 ```
 
 If you do not have a CommonJS environment (no `module.exports`), the module
