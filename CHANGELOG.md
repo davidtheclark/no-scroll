@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.1.0
+
+- Add `toggle` function.
+
 ## 2.0.0
 
 - Switch methods for scroll blocking. Now we're fixing the `position` of `document.documentElement`.
