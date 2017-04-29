@@ -1,4 +1,5 @@
 (function(root) {
+  var isOn = false;
   var scrollbarSize;
   var scrollTop;
 
@@ -30,6 +31,7 @@
     doc.style.position = 'fixed';
     doc.style.top = -scrollTop + 'px';
     doc.style.overflow = 'hidden';
+    isOn = true;
   }
 
   function off() {
@@ -40,11 +42,21 @@
     doc.style.top = '';
     doc.style.overflow = '';
     window.scroll(0, scrollTop);
+    isOn = false;
+  }
+
+  function toggle() {
+    if (isOn) {
+      off();
+      return;
+    }
+    on();
   }
 
   var noScroll = {
     on: on,
     off: off,
+    toggle: toggle,
   };
 
   if (typeof module !== 'undefined' && typeof module.exports !== 'undefined') {
