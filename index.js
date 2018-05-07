@@ -6,7 +6,7 @@
   function getScrollbarSize() {
     if (typeof scrollbarSize !== 'undefined') return scrollbarSize;
 
-    var doc = document.documentElement;
+    var doc = document.body || document.documentElement;
     var dummyScroller = document.createElement('div');
     dummyScroller.setAttribute('style', 'width:99px;height:99px;' + 'position:absolute;top:-9999px;overflow:scroll;');
     doc.appendChild(dummyScroller);
@@ -16,12 +16,12 @@
   }
 
   function hasScrollbar() {
-    return document.documentElement.scrollHeight > window.innerHeight;
+    return (document.body || document.documentElement).scrollHeight > window.innerHeight;
   }
 
   function on(options) {
     if (typeof document === 'undefined') return;
-    var doc = document.documentElement;
+    var doc = document.body || document.documentElement;
     scrollTop = window.pageYOffset;
     if (hasScrollbar()) {
       doc.style.width = 'calc(100% - '+ getScrollbarSize() +'px)';
@@ -36,7 +36,7 @@
 
   function off() {
     if (typeof document === 'undefined') return;
-    var doc = document.documentElement;
+    var doc = document.body || document.documentElement;
     doc.style.width = '';
     doc.style.position = '';
     doc.style.top = '';
