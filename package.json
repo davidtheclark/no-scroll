@@ -4,7 +4,7 @@
   "description": "Disable the document's scrolling",
   "main": "index.js",
   "scripts": {
-    "start": "browser-sync start --server --files demo/*.js --index ./demo.html",
+    "start": "watchify demo -o demo/demo-bundle.js & browser-sync start --server --files demo/*.js --index ./demo.html",
     "demo-bundle": "browserify demo -o demo/demo-bundle.js"
   },
   "repository": {
@@ -26,7 +26,8 @@
   "homepage": "https://github.com/davidtheclark/no-scroll#readme",
   "devDependencies": {
     "browser-sync": "^2.14.0",
-    "browserify": "^11.0.1"
+    "browserify": "^11.0.1",
+    "watchify": "^3.11.0"
   },
   "files": [
     "index.js"

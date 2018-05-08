@@ -1,5 +1,7 @@
 var noScroll = require('..');
 
+global.noScroll = noScroll;
+
 var activators = document.getElementsByClassName('js-activator');
 var deactivators = document.getElementsByClassName('js-deactivator');
 

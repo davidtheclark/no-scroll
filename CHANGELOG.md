@@ -1,5 +1,9 @@
 # Changelog
 
+## HEAD
+
+- Prevent accidentally scrolling to the top of the viewport if you call `noScroll.on()` twice without any intervening `noScroll.off()`.
+
 ## 2.1.0
 
 - Add `toggle` function.

@@ -20,7 +20,7 @@
   }
 
   function on(options) {
-    if (typeof document === 'undefined') return;
+    if (typeof document === 'undefined' || isOn) return;
     var doc = document.documentElement;
     scrollTop = window.pageYOffset;
     if (hasScrollbar()) {
@@ -35,7 +35,7 @@
   }
 
   function off() {
-    if (typeof document === 'undefined') return;
+    if (typeof document === 'undefined' || !isOn) return;
     var doc = document.documentElement;
     doc.style.width = '';
     doc.style.position = '';
