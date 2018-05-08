@@ -1,6 +1,6 @@
 # Changelog
 
-## HEAD
+## 2.1.1
 
 - Prevent accidentally scrolling to the top of the viewport if you call `noScroll.on()` twice without any intervening `noScroll.off()`.
 
