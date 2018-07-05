@@ -28,6 +28,7 @@
     } else {
       doc.style.width = '100%';
     }
+    doc.style.height = doc.scrollHeight + 'px';
     doc.style.position = 'fixed';
     doc.style.top = -scrollTop + 'px';
     doc.style.overflow = 'hidden';
@@ -38,6 +39,7 @@
     if (typeof document === 'undefined' || !isOn) return;
     var doc = document.documentElement;
     doc.style.width = '';
+    doc.style.height = '';
     doc.style.position = '';
     doc.style.top = '';
     doc.style.overflow = '';
