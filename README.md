@@ -19,7 +19,9 @@ Dependencies: *none*.
 
 ## Browser Support
 
-IE9+
+Desktop: IE9+
+
+Mobile: Has no effect in iOS, where this simple approach does not work. For a more complex approach that aims to block scrolling on iOS, try [body-scroll-lock](https://github.com/willmcpo/body-scroll-lock).
 
 ## Usage
 
