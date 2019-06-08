@@ -1,5 +1,13 @@
 # no-scroll
 
+
+---
+
+**SEEKING CO-MAINTAINERS!** Continued development of this project is going to require the work of one or more dedicated co-maintainers (or forkers). If you're interested, please comment in [this issue](https://github.com/davidtheclark/no-scroll/issues/13).
+
+---
+
+
 Disable the document's scrolling.
 
 It's silly how many libraries have their own implementation of this.
