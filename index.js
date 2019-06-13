@@ -8,7 +8,11 @@
 
     var doc = document.documentElement;
     var dummyScroller = document.createElement('div');
-    dummyScroller.setAttribute('style', 'width:99px;height:99px;' + 'position:absolute;top:-9999px;overflow:scroll;');
+    dummyScroller.style.width = '99px';
+    dummyScroller.style.height = '99px';
+    dummyScroller.style.position = 'absolute';
+    dummyScroller.style.top = '-9999px';
+    dummyScroller.style.overflow = 'scroll';
     doc.appendChild(dummyScroller);
     scrollbarSize = dummyScroller.offsetWidth - dummyScroller.clientWidth;
     doc.removeChild(dummyScroller);
